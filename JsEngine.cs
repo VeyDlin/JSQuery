@@ -31,6 +31,7 @@ class JsEngine {
 
         AddType(typeof(Console));
         AddType(typeof(File));
+        AddType(typeof(Directory));
         AddType(typeof(ExcelParser));
         AddType(typeof(WebParser));
         AddType(typeof(ZipFile));

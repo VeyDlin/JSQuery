@@ -77,9 +77,15 @@ public class WebParser {
     public void Load(string url, string path) {
         Task task = Task.Run(async () => {
             var response = await client.GetStreamAsync(url);
+
+            if (File.Exists(path)) {
+                File.Delete(path);
+            }
+
             using var file = new FileStream(path, FileMode.CreateNew);
             await response.CopyToAsync(file);
         });
+        task.Wait();
     }
 
 
