@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Dynamic;
+using System.IO.Compression;
 using System.Text;
 using Microsoft.ClearScript;
 using Microsoft.ClearScript.JavaScript;
@@ -32,6 +33,7 @@ class JsEngine {
         AddType(typeof(File));
         AddType(typeof(ExcelParser));
         AddType(typeof(WebParser));
+        AddType(typeof(ZipFile));
     }
 
 

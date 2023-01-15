@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
@@ -73,9 +74,17 @@ public class WebParser {
 
 
 
+    public void Load(string url, string path) {
+        Task task = Task.Run(async () => {
+            var response = await client.GetStreamAsync(url);
+            using var file = new FileStream(path, FileMode.CreateNew);
+            await response.CopyToAsync(file);
+        });
+    }
 
 
-	public void SetUserAgent(string header) {
+
+    public void SetUserAgent(string header) {
 		client.DefaultRequestHeaders.UserAgent.Clear();
 		client.DefaultRequestHeaders.UserAgent.TryParseAdd(header);
 	}
