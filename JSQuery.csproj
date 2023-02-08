@@ -22,6 +22,7 @@
   <ItemGroup>
     <PackageReference Include="EPPlus" Version="6.1.1" />
     <PackageReference Include="FastExcel" Version="3.0.13" />
+    <PackageReference Include="Goblinfactory.Konsole" Version="7.0.0.7-alpha" />
     <PackageReference Include="Microsoft.ClearScript" Version="7.3.6" />
     <PackageReference Include="Microsoft.ClearScript.Core" Version="7.3.6" />
     <PackageReference Include="Microsoft.ClearScript.V8" Version="7.3.6" />

@@ -35,6 +35,8 @@ class JsEngine {
         AddType(typeof(ExcelParser));
         AddType(typeof(WebParser));
         AddType(typeof(ZipFile));
+        AddType(typeof(ConsoleTable));
+        AddType(typeof(ConsoleProgressBar));
     }
 
 
